@@ -11,3 +11,9 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - run: echo "This is pipeline ID << pipeline.id >>"
+      
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build
