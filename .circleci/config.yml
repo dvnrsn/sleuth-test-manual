@@ -9,3 +9,5 @@ jobs:
        auth:
           username: dvnrsn
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - run: echo "This is pipeline ID << pipeline.id >>"
